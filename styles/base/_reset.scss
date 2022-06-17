@@ -72,3 +72,11 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+// had to add these, despite KP not mentioning it...
+// t=41m shows the old reset style that took care of this
+// the new one starting line 22 only applies to a specific role attribute
+ul {
+  padding-inline-start: 0;
+  list-style-type: none;
+}

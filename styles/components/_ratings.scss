@@ -1,0 +1,9 @@
+.ratings {
+  // --flow-space: 3rem;
+  li {
+    color: var(--clr-primary-700);
+    background: var(--clr-neutral-200);
+    font-weight: 800;
+    padding: .5rem;
+  }
+}
