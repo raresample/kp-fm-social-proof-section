@@ -7,3 +7,11 @@
 .flow-content > * + * {
   margin-top: var(--flow-space, 1rem);
 }
+
+.split {
+  display: flex;
+}
+
+.a-center {
+  align-items: center;
+}
