@@ -5,5 +5,17 @@
     background: var(--clr-neutral-200);
     font-weight: 800;
     padding: .5rem;
+  
+    &::before {
+      content: '';
+      width: 100px;
+      height: 1rem;
+      margin: 0 auto;
+      display: block;
+      background-color: yellow;
+      background-image: url(../../images/icon-star.svg);
+      background-repeat: space;
+      margin-bottom: .5rem;
+    }
   }
 }
