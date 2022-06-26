@@ -4,7 +4,7 @@
     color: var(--clr-primary-700);
     background: var(--clr-neutral-200);
     font-weight: 800;
-    padding: .5rem;
+    padding: .75rem 2rem;
     border-radius: var(--br);
     max-width: 25rem;
     margin-left: auto;
@@ -16,10 +16,27 @@
       height: 1rem;
       margin: 0 auto;
       display: block;
-      background-color: yellow;
+      // background-color: yellow;
       background-image: url(../../images/icon-star.svg);
       background-repeat: space;
       margin-bottom: .5rem;
+    }
+
+    @media (min-width: 50em) {
+      display: flex;
+      align-content: center;
+
+      &::before {
+        margin: 0 1.5rem 0 0;
+      }
+
+      &:first-of-type {
+        transform: translateX(-3rem);
+      }
+
+      &:last-of-type {
+        transform: translateX(3rem);
+      }
     }
   }
 }

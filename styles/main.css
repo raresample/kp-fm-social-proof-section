@@ -97,6 +97,10 @@ ul {
   -webkit-padding-start: 0;
           padding-inline-start: 0;
   list-style-type: none;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 
 body {
@@ -111,15 +115,43 @@ h1 {
   color: var(--clr-primary-700);
   line-height: 1;
   max-width: 12ch;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 1em;
+}
+@media (max-width: 50em) {
+  h1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .lead {
   font-size: var(--fs-500);
 }
 
+main {
+  display: grid;
+  gap: 3rem 1rem;
+}
+
+@media (min-width: 50em) {
+  main {
+    grid-template-columns: 1fr 1.5fr;
+    text-align: left;
+  }
+
+  .intro {
+    grid-column: 1/2;
+  }
+
+  .ratings {
+    grid-column: 2/3;
+    align-self: center;
+  }
+
+  .quotes {
+    grid-column: 1/-1;
+  }
+}
 .container {
   max-width: 70rem;
   padding: 0 2em;
@@ -132,6 +164,13 @@ h1 {
 
 .split {
   display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+@media (min-width: 50em) {
+  .split {
+    flex-direction: row;
+  }
 }
 
 .a-center {
@@ -141,6 +180,12 @@ h1 {
 .quotes {
   --spacer: 1.5rem;
 }
+.quotes li:nth-child(2) {
+  transform: translateY(3rem);
+}
+.quotes li:nth-child(3) {
+  transform: translateY(6rem);
+}
 .quotes blockquote {
   background: var(--clr-primary-700);
   color: var(--clr-neutral-200);
@@ -149,6 +194,10 @@ h1 {
   padding: var(--spacer);
   max-width: 25rem;
   margin: 0 auto;
+  height: 100%;
+}
+.quotes blockquote:nth-child(2) {
+  margin-top: 3rem;
 }
 .quotes img {
   width: 3rem;
@@ -169,7 +218,7 @@ h1 {
   color: var(--clr-primary-700);
   background: var(--clr-neutral-200);
   font-weight: 800;
-  padding: 0.5rem;
+  padding: 0.75rem 2rem;
   border-radius: var(--br);
   max-width: 25rem;
   margin-left: auto;
@@ -181,8 +230,22 @@ h1 {
   height: 1rem;
   margin: 0 auto;
   display: block;
-  background-color: yellow;
   background-image: url(../../images/icon-star.svg);
   background-repeat: space;
   margin-bottom: 0.5rem;
+}
+@media (min-width: 50em) {
+  .ratings li {
+    display: flex;
+    align-content: center;
+  }
+  .ratings li::before {
+    margin: 0 1.5rem 0 0;
+  }
+  .ratings li:first-of-type {
+    transform: translateX(-3rem);
+  }
+  .ratings li:last-of-type {
+    transform: translateX(3rem);
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -79,4 +79,8 @@ select {
 ul {
   padding-inline-start: 0;
   list-style-type: none;
+
+  // Added these to improve card v-staggering precision
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
